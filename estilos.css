@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("https://a-static.besthdwallpaper.com/rick-and-morty-portal-gun-wallpaper-3840x2160-89895_54.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Capa oscura encima */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* ===== TITULO VERDE NEON ===== */
+.titulo-principal {
+  color: #39ff14;
+  font-weight: bold;
+  font-size: 3rem;
+  text-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14,
+    0 0 20px #00ff99,
+    0 0 40px #00ff99;
+}
+
+/* ===== TARJETAS MAS PEQUEÑAS ===== */
+.tarjeta-custom {
+  background: rgba(52, 57, 104, 0.9);
+  border: 5px solid #39ff14;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #39ff14;
+  transition: 0.3s ease;
+  color: #00eaff;
+
+  max-width: 320px;
+  width: -170px; /* ancho fijo */
+  max-width: 100%; /* evita que se rompa en móvil */
+  margin: auto;
+}
+
+/* Imagen más pequeña */
+.tarjeta-custom img {
+  height: 330px;
+  object-fit: cover;
+}
+
+/* Hover efecto */
+.tarjeta-custom:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 20px #39ff14,
+    0 0 35px #00ff99;
+}
+
+/* ===== BOTONES NEON ===== */
+.btn-primary,
+.btn-warning {
+  background: transparent;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-warning:hover {
+  background: #39ff14;
+  color: rgb(0, 247, 255);
+  box-shadow:
+    0 0 10px #39ff14,
+    0 0 20px #00ff99,
+    0 0 40px #00ff99;
+}
+
+/* ===== TEXTO AZUL NEON ===== */
+.card-text,
+.modal-body p,
+span,
+strong {
+  color: #00eaff;
+  text-shadow: 0 0 5px #00eaff;
+}
+
+/* ===== MODAL ESTILO SCI-FI ===== */
+.modal-custom {
+  background: rgba(10, 10, 30, 0.95);
+  border: 2px solid #39ff14;
+  box-shadow: 0 0 20px #39ff14;
+  color: #00eaff;
+}
+
+/* ===== INPUTS Y SELECT ===== */
+.form-control,
+.form-select {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00eaff;
+  color: #00eaff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 10px #00eaff;
+  border-color: #39ff14;
+}
+
+/* ===== BARRA DE PROGRESO ===== */
+.progress {
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #39ff14;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #39ff14, #00ff99);
+  font-weight: bold;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+/* ===== ANIMACION SUAVE AL CARGAR ===== */
+.card {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FAVORITOS TIPO CARRITO ===== */
+
+.favoritos-container {
+    background: rgba(10, 10, 30, 0.9);
+    border: 2px solid #39ff14;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #39ff14;
+}
+
+.titulo-favoritos {
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14;
+}
+
+.carrito-item {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00eaff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    color: #00eaff;
+}
